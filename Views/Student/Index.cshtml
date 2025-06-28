@@ -1,0 +1,14 @@
+@model List<StudentGradeCalculator.Models.Student>
+
+<h2>All Students</h2>
+<a href="/Student/Add">Add Student</a>
+<ul>
+@foreach (var s in Model)
+{
+    <li>
+        @s.StudentId - @s.FullName
+        [<a href="/Student/Grades/@s.StudentId">Grades</a>]
+        [<a href="/Student/Log/@s.StudentId">Compute</a>]
+    </li>
+}
+</ul>

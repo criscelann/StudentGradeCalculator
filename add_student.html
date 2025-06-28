@@ -1,0 +1,19 @@
+<!-- add_student.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Add Student</title>
+</head>
+<body>
+  <h2>Add Student</h2>
+  <form method="POST" action="php/bridge.php">
+    <input type="hidden" name="action" value="add_student">
+    <input type="text" name="student_id" placeholder="Student ID" required>
+    <input type="text" name="full_name" placeholder="Full Name" required>
+    <input type="text" name="subject" placeholder="Subject" required>
+    <input type="number" name="grade" placeholder="Grade" required>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

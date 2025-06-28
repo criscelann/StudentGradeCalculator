@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Computation Result";
+}
+
+<h2>Computation Result</h2>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+else
+{
+    <p><strong>Average Grade:</strong> @ViewBag.Average</p>
+
+    @if ((bool)ViewBag.DeansList)
+    {
+        <p style="color: green;">🎓 Congratulations! The student qualifies for the <strong>Dean’s List</strong>.</p>
+    }
+    else
+    {
+        <p style="color: red;">❌ The student does <strong>not</strong> qualify for the Dean’s List.</p>
+    }
+}
